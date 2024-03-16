@@ -112,7 +112,7 @@ const Post = (props) => {
       
         <Card.Text>{props.post.text}</Card.Text>
         {imageExist ? <Card.Img variant="top" src={image} style={{ maxHeight: '300px', maxWidth: '500px', width: 'auto', height: 'auto' }} /> : ""}
-        <Card.Text>{createDateFromArray(props.post.createDate)}</Card.Text>
+        <Card.Text>{props.post.createDate}</Card.Text>
         <Card.Text>Polubienia: {likes}, Komentarze {props.post.comments}</Card.Text>
         {validToken() ? <Button variant="primary" onClick={handleLikeClick} >{isLiked ? "Dislike" : "Like"}</Button> : ""}
       </Card.Body>
